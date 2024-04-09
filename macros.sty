@@ -1,0 +1,13 @@
+\usepackage{standalone}
+
+\usepackage[numbers]{natbib}
+\bibliographystyle{plainnat}
+\renewcommand{\bibsection}{}
+\AtEndDocument{
+    \newpage
+    \section*{References}
+    \addcontentsline{toc}{section}{References}
+    \small 
+    \bibliography{main}
+    \normalsize
+}
