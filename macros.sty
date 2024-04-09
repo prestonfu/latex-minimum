@@ -1,5 +1,9 @@
 \usepackage{standalone}
 
+\newcommand{\bibliopath}{main}
+\DeclareOption{infolder}{\renewcommand{\bibliopath}{../main}}
+\ProcessOptions\relax
+
 \usepackage[numbers]{natbib}
 \bibliographystyle{plainnat}
 \renewcommand{\bibsection}{}
@@ -8,6 +12,8 @@
     \section*{References}
     \addcontentsline{toc}{section}{References}
     \small 
-    \bibliography{main}
+    \bibliography{\bibliopath}
     \normalsize
 }
+
+\usepackage{blindtext}
